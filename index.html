@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    body {
+        font-family: Arial;
+        background: linear-gradient(135deg, #0f172a, #1e3a8a);
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+
+    .container {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .search-box {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+
+    input {
+        padding: 12px;
+        width: 300px;
+        max-width: 90%;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background: rgba(255,255,255,0.1);
+        color: white;
+    }
+
+    .search-btn {
+        padding: 12px 20px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: rgba(255,255,255,0.2);
+    }
+
+    /* MAIN SECTION */
+    .movies {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    /* WHITE CARD */
+    .movie-card {
+        display: flex;
+        gap: 20px;
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        max-width: 900px;
+        width: 100%;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    /* POSTER */
+    #img {
+        width: 250px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* DETAILS */
+    .moviedecryp {
+        flex: 1;
+    }
+
+    .details {
+        color: black;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+        .movie-card {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #img {
+            width: 80%;
+        }
+    }
+    .details h2{
+        font-family: sans-serif;
+        position: relative;
+        left: 100px;
+        bottom: 10px;
+    }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🎬 Movie Search</h1>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search movie...">
+        <button class="search-btn">Search</button>
+    </div>
+</div>
+
+<div class="movies">
+    <div class="movie-card">
+        <img src="" id="img">
+
+        <div class="moviedecryp">
+            <p class="details">Search a movie to see details...</p>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
