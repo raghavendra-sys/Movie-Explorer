@@ -20,6 +20,11 @@ async function getMovie(name){
         let mname = cleanertext(name);
         let data= await fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(mname)}&apikey=2a1dc971`);
         let jsondata= await data.json();
+         if(jsondata.Response==="False"){
+            aboutmovie.innerHTML = "<p>Movie not found.</p>";
+            movieimg.src="";
+            return;
+        }
         movieimg.src=jsondata.Poster;
         aboutmovie.innerHTML=` 
         <h2> Title :${jsondata.Title}</h2>
